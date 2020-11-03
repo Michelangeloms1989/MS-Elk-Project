@@ -9,46 +9,8 @@ https://go.gliffy.com/go/publish/13389707
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the palybook file may be used to install only certain pieces of it, such as Filebeat.
 
   - _TODO: Enter the playbook file._
-  
----
-  - name: My first playbook
-    hosts: webservers
-    become: true
-    tasks:
+  ~/Documents/Cybersecurity-Bootcamp/ELK/my_first_playbook.yml.txt
 
-    - name: Install apache httpd (state=present is optional)
-      apt:
-        name: apache2
-        state: absent
-
-    - name: Install docker.io
-      apt:
-        name: docker.io
-        update_cache: yes
-        state: present
-
-    - name: Install Python3-pip
-      apt:
-        name: python3-pip
-        state: present
-
-    - name: Install Docker using pip
-      pip:
-        name: docker
-        state: present
-
-    - name: Install DVWA
-      docker_container:
-        name: dvwa
-        image: cyberxsecurity/dvwa
-        restart_policy: always
-        published_ports: 80:80
-        state: started
-
-    - name: Enable docker service on restart
-      systemd:
-        name: docker
-        enabled: yes
 This document contains the following details:
 - Description of the Topologu
 - Access Policies
